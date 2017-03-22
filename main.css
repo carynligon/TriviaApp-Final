@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background: #ececec;
+    font-family: avenir;
+    margin: 0;
+}
+nav {
+    background: #127ed1;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+    padding: 1rem;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.in-game-new {
+    bottom: 0;
+    text-align: center;
+}
+nav button {
+    background: transparent;
+    border: 0;
+    border-bottom: 3px solid #4a4745;
+    color: #fff;
+    font-size: 1rem;
+    transition: all .3s;
+}
+nav button:hover,
+nav button:active,
+nav button:focus {
+    border-bottom: 3px solid #fff;
+    cursor: pointer;
+    outline: 0;
+}
+.in-game-new button {
+    background-color: transparent;
+    border: 5px solid #4a4745;
+    color: #4a4745;
+    margin: 2rem;
+    outline: 0;
+    padding: 1rem;
+}
+.in-game-new button:hover {
+    background: #4a4745;
+    color: #fff;
+    cursor: pointer;
+    outline: 0;
+}
+.scene {
+    color: #4a4745;
+    display: none;
+    font-family: 'Carter One', 'avenir', 'sans serif';
+    font-size: 7rem;
+    padding: 100px 3rem 0 3rem;
+    text-align: center;
+}
+.scene.in {
+    display: block;
+}
+.counter {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.question-wrapper {
+    display: none;
+}
+.question-wrapper.in {
+    display: block;
+}
+.question-wrapper {
+    margin: 0 auto;
+    width: 100%;
+}
+.question-wrapper p {
+    background: #127ed1;
+    box-shadow: 2px 3px 2px rgba(0,0,0,.25);
+    color: #fff;
+    margin: 0;
+    padding: 10rem 3rem;
+    text-align: center;
+}
+.answer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.answer-list fieldset {
+    background: #fff;
+    border: 0;
+    border-radius: 15px;
+    margin: .5rem;
+    padding: .5rem 1rem;
+    transition: all .3s;
+    width: 40%;
+}
+.answer-list fieldset label {
+    display: inline-block;
+    vertical-align: middle;
+    width: 90%;
+}
+.answer-list fieldset label:hover,
+.answer-list fieldset label:focus,
+.answer-list fieldset label:active {
+    cursor: pointer;
+}
+.answer-list fieldset:hover,
+.answer-list fieldset:focus,
+.answer-list fieldset:active,
+.answer-list fieldset.selected {
+    background: #127ed1;
+    color: #fff;
+    cursor: pointer;
+}
+.answer-list fieldset input {
+    display: none;
+}
+.answer-list .submit-wrapper {
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+}
+.answer-list button {
+    background: #127ed1;
+    border: 3px solid #127ed1;
+    color: #fff;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    transition: all .3s;
+}
+.answer-list button:hover,
+.answer-list button:focus,
+.answer-list button:active {
+    background: #fff;
+    color: #127ed1;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .in-game-new {
+        padding: 1rem;
+    }
+    .in-game-new button {
+        margin: 1rem;
+    }
+    .scene {
+        font-size: 4rem;
+    }
+    .question-wrapper p {
+        padding: 5rem;
+    }
+    .answer-list {
+        margin-top: 1rem;
+    }
+    .answer-list fieldset {
+        width: 80%;
+    }
+    .answer-list button {
+        padding: .5rem 1rem;
+    }
+    .answer-list .submit-wrapper {
+        margin-top: .5rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .question-wrapper p {
+        padding: 3rem;
+    }
+}
