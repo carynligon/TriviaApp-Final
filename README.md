@@ -1,5 +1,14 @@
-### Install the project
+### The final product
+[Here](http://super-trivia.surge.sh/)
 
+### Install the editor
+[Sublime Text](https://www.sublimetext.com/3)
+
+### Install the project
+1. Click "clone or download"
+2. Click "download zip"
+3. Go to downloads folder on your computer and click the folder to unzip
+4. Right click on unzipped folder and open with sublime text
 
 ### Resources
 [How hex codes work](http://codepen.io/carynligon/pen/ZexxEB)
