@@ -76,14 +76,16 @@ function buildQuestion(questionObj,i) {
     $(questionP).empty();
     $(questionP).text(question);
     $(answerList).empty();
-    answers.forEach((answer,i) => {
+    let index = 0;
+    while (index < answers.length) {
         $(answerList).append(`
             <fieldset>
-                <input type="radio" id="answer-${i}" value="${answer}" name="answer" />
-                <label for="answer-${i}">${answer}</label>
+                <input type="radio" id="answer-${index}" value="${answers[index]}" name="answer" />
+                <label for="answer-${index}">${answers[index]}</label>
             </fieldset>
             `)
-    });
+        index++;
+    }
     $('.answer-list input').change((e) => {
         $('.answer-list input').parent().removeClass('selected');
         if (e.target.checked) {
@@ -135,10 +137,12 @@ answerList.addEventListener('submit', (e) => {
     e.preventDefault();
     let guess = null;
     const answers = document.querySelectorAll('input[type="radio"]');
-    answers.forEach((answer) => {
-        if (answer.checked) {
-            guess = answer.value;
+    let index = 0;
+    while (index < answers.length) {
+        if (answers[index].checked) {
+            guess = answers[index].value;
         }
-    });
+        index++;
+    }
     checkAnswer(questions[score.answered],guess);
 });

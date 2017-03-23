@@ -4,6 +4,9 @@
 ### Install the editor
 [Sublime Text](https://www.sublimetext.com/3)
 
+### Check your browser
+- Make sure you're using either Chrome or Firefox
+
 ### Install the project
 1. Click "clone or download"
 2. Click "download zip"
